@@ -1,25 +1,27 @@
-const mongoose=require("mongoose")
+const mongoose = require("mongoose")
 
-const recipeSchema=mongoose.Schema(
+const recipeSchema = mongoose.Schema(
     {
-        title:String,
-        required:true
+        title: {
+            type: String,
+            required: true
+        },
+        ingredients: {
+            type: String,
+            required: true
+        },
+        instructions: {
+            type: String,
+            required: true
+        },
+        time: {
+            type: String,
+        },
+        coverImage: {
+            type: String,
+        }
     },
-    {
-        ingredients:String,
-        required:true
-    },
-    {
-        instuction:String,
-        required:true
-    },
-    {
-        time:String
-    },
-    {
-        coverImage:String
-    },
-    {Timestamp:true}
+    { Timestamp: true }
 )
 
-module.exports=mongoose.model("Recipes",recipeSchema)
+module.exports = mongoose.model("Recipes", recipeSchema)
