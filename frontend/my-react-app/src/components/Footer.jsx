@@ -1,11 +1,9 @@
 import React from 'react'
 
-function Footer() {
+export default function Footer() {
   return (
     <div className='footer'>
-      <p>@coperight imaginary engineering</p>
+        <p>@copyright imaginary engineering</p>
     </div>
   )
 }
-
-export default Footer
